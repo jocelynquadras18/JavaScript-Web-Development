@@ -1,39 +1,33 @@
+// coding challenge
 
- // Boolean
- //boolean logic
- //and true if all true
- //or true if one is true
- //not! reverts the exression
+var height1=45;
+var height2=100;
+var height3=55;
+var age1=2;
+var age2=2;
+var age3=2;
 
- var age=12;
- if(age<20)
- {
-   console.log("John is a teenager")
- }
- else if(age>20 && age <30)
- {
-   console.log("John is young man")
- }
- else
+var calScore1=height1+(5*age1);
+var calScore2=height2+(5*age2);
+var calScore3=height3+(5*age3);
+
+console.log('calScore1 : ' + calScore1);
+console.log('calScore2 : ' + calScore2);
+console.log('calScore3 : ' + calScore3);
+
+if(calScore1>calScore2 && calScore1>calScore3  )
 {
-console.log("John is a man")
+  console.log('Friend 1 wins. Score is ' + calScore1);
 }
-
-
-//switch statments
-
-var job="cop"
-switch(job)
+else if(calScore3>calScore2 && calScore3>calScore1)
 {
-  case 'teacher':
-  console.log('John teaches kid');
-  break
-  case 'driver':
-  console.log('John drives cab');
-  break
-  case 'cop':
-  console.log('John helps fight crime');
-  break;
-  default:
-  console.log('John does something else');
+  console.log('Friend 3 wins. Score is ' + calScore3);
+  }
+else if(calScore1===calScore2 && calScore2===calScore3)
+{
+  console.log('Its a draw \n' + 'Score1 :'+ calScore1+ '\n'+ 'Score2 :' + calScore2 + '\n'+ 'Score3 :' + calScore3)
+}
+else
+{
+    console.log('Friend 2 wins. Score is ' + calScore2);
 }
