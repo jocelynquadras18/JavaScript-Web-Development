@@ -1,33 +1,36 @@
-//functions
-//console.log(calAge(YOB));
-/*
-function calAge(yearOfBirth)
-{
-  var age=2016 - yearOfBirth;
-  return age;
-}
+//arrays
 
-function yearsUntilRetirement(name,year)
-{
-  var age=calAge(year);
-  var retirement=65-age;
-  if(retirement>=0)
-  {
-    console.log(name + ' retires in ' + retirement + ' years.');
-  }
-  else {
-    {
-      console.log(name + 'is already retired');
-  }
-}
+var names=['Jocelyn','Khushwant'];
+var years= new Array(1222,1228,1990);
+var ex=['Jocelyn',1992,'Developer'];
+console.log(ex);
+ex.push('Mama'); //pushes at the end
+console.log(ex);
+ex.unshift('Miss.'); //appends at begining
+console.log(ex);
+ex.pop(); //removes last element
+console.log(ex);
+console.log(ex.indexOf('Miss.'));
 
-yearsUntilRetirement('John', 1990 )
-*/
 
-//Statements and Expressions
+//objects
 
-//Expression gives some value
+var joc={name:'Jocelyn', age:'25', lastName:'Quadras',job:'Teacher'};
+console.log(joc.name);
 
-//eg: var someParam=function(par){code}
 
-//Statements are just logic
+var abc=new Object();
+abc.firstName='Jocelyn';
+console.log(abc);
+
+
+//Objects and Methods
+//this: used to refer to property of that object itself
+var joc={name:'Jocelyn',
+          yearOfBirth:1992,
+          calculateAge:function()
+        {
+          this.age= 2016-this.yearOfBirth;
+        }};
+joc.calculateAge();
+console.log(joc);
